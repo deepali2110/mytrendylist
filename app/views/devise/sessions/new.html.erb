@@ -1,0 +1,51 @@
+<br><br><div class="card" style="text-align:center;width:50%;margin:auto">
+  <div class="card-header" style="background-color: #B72640;color:white">
+    <h2>Log in</h2>
+  </div>
+  <div class="card-body" style="text-align:center">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="alert alert-danger" role="alert">
+    <%= flash[:alert]%>
+  
+</div>  
+
+  <div class="field form-group">
+    <% f.label :email %><br />
+    <%= f.email_field :email, class:"form-control", placeholder:"Email",autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <% f.label :password %><br />
+    <%= f.password_field :password, class:"form-control", placeholder:"Password", autocomplete: "current-password" %>
+  </div>
+  <br>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field ">
+      <%= f.check_box :remember_me, class:"form-check-input" %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+  <br>
+
+  <div class="actions">
+    <%= f.submit "Log in", class: 'btn btn-warning' %>
+  </div>
+<% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<div style="text-align:center">
+<%= render "devise/shared/links" %>
+</div>
