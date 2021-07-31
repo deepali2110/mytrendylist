@@ -120,8 +120,8 @@ Rails.application.configure do
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.action_mailer.delivery_method = :smtp
-host = 'localost:3000' #replace with your own url
-config.action_mailer.default_url_options = {  :host => 'localhost:3000', protocol: 'http'  }
+host = 'https://trendylist.herokuapp.com/' #replace with your own url
+config.action_mailer.default_url_options = {  :host => 'trendylist.herokuapp', protocol: 'http'  }
 
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
