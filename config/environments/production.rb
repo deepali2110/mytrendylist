@@ -28,7 +28,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'
@@ -117,20 +117,22 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
- # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  #config.action_mailer.delivery_method = :smtp
-#host = 'https://trendylist.herokuapp.com/' #replace with your own url
-#config.action_mailer.default_url_options = {  :host => 'trendylist.herokuapp', protocol: 'http'  }
+
+config.action_mailer.delivery_method = :smtp
+host = '#https://trendylist.herokuapp.com' #replace with your own url
+config.action_mailer.default_url_options = {  host: host }
 
 # SMTP settings for gmail
-#config.action_mailer.smtp_settings = {
- # :address              => "smtp.gmail.com",
- # :port                 => 587,
- # :user_name            => deepalimisale2110@gmail.com,
- # :password             => harikrishna@1,
- # :authentication       => "plain",
- # :enable_starttls_auto => true
-#}
+config.action_mailer.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :user_name            => "deepalimisale2110@gmail.com",
+  :password             => "harikrishna@1",
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+}
 
 end
+#https://trendylist.herokuapp.com
