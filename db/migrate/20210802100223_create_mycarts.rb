@@ -1,6 +1,6 @@
-class CreateCarts < ActiveRecord::Migration[6.1]
+class CreateMycarts < ActiveRecord::Migration[6.1]
   def change
-    create_table :carts do |t|
+    create_table :mycarts do |t|
       t.string :userid
       t.string :useremail
       t.string :productid

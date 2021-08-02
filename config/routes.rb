@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :carts do
+  resources :mycarts do
   resources :products
   end
   resources :products

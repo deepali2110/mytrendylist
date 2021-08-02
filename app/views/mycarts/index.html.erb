@@ -1,0 +1,38 @@
+
+
+<h1>MyCart</h1>
+
+<table>
+  <thead>
+    <tr>
+      <%# <th>Userid</th>
+      <th>Useremail</th>
+      <th>Productid</th> %>
+      <th>Productname</th>
+      <th>Count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mycarts.each do |mycart| %>
+      <tr>
+        
+        <% if mycart.useremail == current_user.email %>
+         <td><%= mycart.productname %></td>
+        <td><%= mycart.count %></td>
+        <!--<td><%= mycart.userid %></td>
+         <td><%= mycart.productid %></td>-->
+        
+        <!--<td><%= link_to 'Show', mycart %></td>
+        <td><%= link_to 'Edit', edit_mycart_path(mycart) %></td>
+        <td><%= link_to 'Destroy', mycart, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mycart', new_mycart_path %>
