@@ -45,6 +45,7 @@ end
 
 group :production do
  gem 'pg', '~> 1.2', '>= 1.2.3'
+
 end 
 
 
