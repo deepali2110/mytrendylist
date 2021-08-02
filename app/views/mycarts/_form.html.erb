@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <% form.label :userid %>
+    <%= form.label :userid %>
     <%= form.text_field :userid, value: current_user.id %>
   </div>
 
   <div class="field">
-    <% form.label :useremail %>
+    <%= form.label :useremail %>
     <%= form.text_field :useremail, value: current_user.email %>
   </div>
 
   <div class="field">
-    <% form.label :productid %>
+    <%= form.label :productid %>
     <%= form.text_field :productid %>
   </div>
 
   <div class="field">
-    <% form.label :productname %>
+    <%= form.label :productname %>
     <%= form.text_field :productname %>
   </div>
 
   <div class="field">
-    <% form.label :count %>
+    <%= form.label :count %>
     <%= form.number_field :count %>
   </div>
 
